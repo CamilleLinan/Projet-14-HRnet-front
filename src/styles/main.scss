@@ -1,9 +1,12 @@
+@use './variables' as *;
+
 body {
     margin: 0;
 }
 
 html {
     font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $bgColor;
 }
 
 a {

@@ -1,16 +1,17 @@
-@import '@scss/_variables.scss';
+@use '@scss/variables' as *;
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1em 0 1em;
-    background-color: $bgColor;
+    background-color: $bgSectionColor;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
     & p {
         font-weight: bold;
         font-size: 22px;
+        margin: 0.5em 0 0.5em 0;
     }
 
     a {

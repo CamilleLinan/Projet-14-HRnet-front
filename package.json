@@ -1,7 +1,7 @@
 {
   "name": "hrnet-front",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
+    "@camlin/react-confirm-modal": "^2.1.3",
     "antd": "^5.21.6",
+    "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",

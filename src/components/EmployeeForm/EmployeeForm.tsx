@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { Employee } from "../../models/Employee";
 import { states } from "../../utils/states";
 import "./_EmployeeForm.scss";
 import { Form, Input, DatePicker, Select, Button, Row, Col } from "antd";
+import ConfirmModal from "@camlin/react-confirm-modal";
 
 const { Option } = Select;
 
 const EmployeeForm = () => {
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
   const [form] = Form.useForm();
+
+  const handleModal = () => {
+    setModalVisible(false);
+  };
 
   const saveEmployee = (newEmployee: Employee) => {
     console.log("Form values:", newEmployee);
@@ -151,6 +158,9 @@ const EmployeeForm = () => {
           </Button>
         </Row>
       </Form>
+      <ConfirmModal
+        visible={modalVisible}
+        onConfirm={handleModal} />
     </div>
   );
 };
