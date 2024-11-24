@@ -1,8 +1,8 @@
-import EmployeeForm from "../components/EmployeeForm/EmployeeForm";
+import EmployeeForm from "@components/EmployeeForm/EmployeeForm";
 
 const Home = () => {
   return (
-    <section>
+    <section className="section-employee-form">
       <EmployeeForm />
     </section>
   );

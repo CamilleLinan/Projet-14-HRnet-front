@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Employee } from "../../models/Employee";
 import { states } from "../../utils/states";
+import { InfoCircleOutlined } from '@ant-design/icons';
 import "./_EmployeeForm.scss";
 import { Form, Input, DatePicker, Select, Button, Row, Col } from "antd";
 import ConfirmModal from "@camlin/react-confirm-modal";
@@ -17,6 +18,7 @@ const EmployeeForm = () => {
 
   const saveEmployee = (newEmployee: Employee) => {
     console.log("Form values:", newEmployee);
+    setModalVisible(true);
   };
 
   return (
@@ -160,7 +162,21 @@ const EmployeeForm = () => {
       </Form>
       <ConfirmModal
         visible={modalVisible}
-        onConfirm={handleModal} />
+        onConfirm={handleModal}
+        title={
+          <span>
+            <InfoCircleOutlined style={{ marginRight: '8px' }} />
+            Confirmation
+          </span>
+        }
+        content="Employee created !"
+        footerButtons={[
+          {
+            text: 'OK',
+            type: 'primary',
+            onClick: handleModal
+          }
+        ]}/>
     </div>
   );
 };

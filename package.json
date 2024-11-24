@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
-    "@camlin/react-confirm-modal": "^2.1.3",
+    "@camlin/react-confirm-modal": "file:../../Plugins/react-modal-confirmation",
     "antd": "^5.21.6",
     "path": "^0.12.7",
     "react": "^18.3.1",
