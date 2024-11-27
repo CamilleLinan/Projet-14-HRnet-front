@@ -1,0 +1,35 @@
+@use '@scss/variables' as *;
+
+.section-employee-list {
+    & .table-container {
+        width: 90%;
+        margin: 2em auto 2em auto;
+        padding: 1em;
+        border-radius: 10px;
+        background-color: $bgSectionColor;
+
+        & h2 {
+            margin-top: -3px;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        & .ant-table-wrapper {
+            & .ant-table-pagination.ant-pagination {
+                margin-bottom: 0;
+            }
+
+            & .ant-pagination .ant-pagination-item-active {
+                border-color: $pryColor;
+                & a {
+                    color: $pryColor;
+                }
+            }
+
+            & .ant-table-column-sorter-up.active,
+            & .ant-table-column-sorter-down.active {
+                color: $pryColor;
+            }
+        }
+    }
+}

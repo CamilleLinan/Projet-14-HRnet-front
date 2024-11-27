@@ -1,54 +1,56 @@
 @use '@scss/variables' as *;
 
-.form-container {
-    width: 60%;
-    margin: 2em auto 2em auto;
-    padding: 1em;
-    border-radius: 10px;
-    background-color: $bgSectionColor;
-
-    & h2 {
-        margin-top: -3px;
-        margin-bottom: 12px;
-        font-size: 20px;
-    }
-
-    & h3 {
-        margin-top: -3px;
-        margin-bottom: 8px;
-    }
-
-    & .bg-white {
-        background-color: white;
-        padding: 1em 1em 0em 1em;
+.section-employee-form {
+    & .form-container {
+        width: 60%;
+        margin: 2em auto 2em auto;
+        padding: 1em;
         border-radius: 10px;
-        margin-bottom: 1em;
-    }
+        background-color: $bgSectionColor;
 
-    & .ant-input-outlined:hover, 
-    .ant-picker-outlined:hover, 
-    .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
-        border-color: $pryColor;
-    }
-
-    & .ant-row > .ant-btn {
-        background-color: $pryColor;
-        color: black;
-        width: 20%;
-        &:hover {
-            background-color: $sdyColor;
-            color: black;
+        & h2 {
+            margin-top: -3px;
+            margin-bottom: 12px;
+            font-size: 20px;
         }
-    }
 
-    .ant-select-focused:where(.css-dev-only-do-not-override-apn68).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
-    .ant-picker-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-picker-outlined:focus-within,
-    .ant-input-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-input-outlined:focus-within {
-        border-color: $pryColor;
-        box-shadow: 0 0 0 2px rgba(186, 155, 0, 0.1);
-    }
+        & h3 {
+            margin-top: -3px;
+            margin-bottom: 8px;
+        }
 
-    .ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label {
-        padding-bottom: 2px;
+        & .bg-white {
+            background-color: white;
+            padding: 1em 1em 0em 1em;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        & .ant-input-outlined:hover, 
+        .ant-picker-outlined:hover, 
+        .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+            border-color: $pryColor;
+        }
+
+        & .ant-row > .ant-btn {
+            background-color: $pryColor;
+            color: black;
+            width: 20%;
+            &:hover {
+                background-color: $sdyColor;
+                color: black;
+            }
+        }
+
+        .ant-select-focused:where(.css-dev-only-do-not-override-apn68).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
+        .ant-picker-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-picker-outlined:focus-within,
+        .ant-input-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-input-outlined:focus-within {
+            border-color: $pryColor;
+            box-shadow: 0 0 0 2px rgba(186, 155, 0, 0.1);
+        }
+
+        .ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label {
+            padding-bottom: 2px;
+        }
     }
 }
