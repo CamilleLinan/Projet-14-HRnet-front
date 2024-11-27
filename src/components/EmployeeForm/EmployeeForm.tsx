@@ -5,19 +5,36 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import "./_EmployeeForm.scss";
 import { Form, Input, DatePicker, Select, Button, Row, Col } from "antd";
 import ConfirmModal from "@camlin/react-confirm-modal";
+import { useDispatch } from "react-redux";
+import { addEmployee } from "@redux/slices/employeeSlice";
+import dayjs from "dayjs";
 
 const { Option } = Select;
 
 const EmployeeForm = () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
   const [form] = Form.useForm();
+  const dispatch = useDispatch();
 
   const handleModal = () => {
     setModalVisible(false);
   };
 
-  const saveEmployee = (newEmployee: Employee) => {
+  const saveEmployee = (values: Employee) => {
+    const newEmployee: Employee = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      dateOfBirth: dayjs(values.dateOfBirth).format('YYYY-MM-DD'),
+      startDate: dayjs(values.startDate).format('YYYY-MM-DD'),
+      department: values.department,
+      street: values.street,
+      city: values.city,
+      state: values.state,
+      zipCode: values.zipCode,
+    };
+
     console.log("Form values:", newEmployee);
+    dispatch(addEmployee(newEmployee));
     setModalVisible(true);
   };
 

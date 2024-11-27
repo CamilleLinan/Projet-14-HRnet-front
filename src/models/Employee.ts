@@ -1,8 +1,8 @@
 export interface Employee {
     firstName: string,
     lastName: string,
-    dateOfBirth: Date,
-    startDate: Date,
+    dateOfBirth: string,
+    startDate: string,
     department: string,
     street: string,
     city: string,
