@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Layout from "../shared/Layout";
-import Home from "../../pages/Home";
+import Layout from "@components/shared/Layout";
+import Home from "../pages/Home";
 
 const IndexRouter:FC = () => {
     return (

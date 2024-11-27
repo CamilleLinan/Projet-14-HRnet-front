@@ -1,4 +1,4 @@
-import IndexRouter from "./components/Router/IndexRouter"
+import IndexRouter from "./router/IndexRouter"
 
 const App = () => {
   return (
