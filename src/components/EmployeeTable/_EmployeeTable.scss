@@ -15,6 +15,14 @@
         }
 
         & .ant-table-wrapper {
+            & .ant-table {
+                border: 1px solid $bgPryColor;
+            }
+
+            & .ant-table-thead th.ant-table-column-has-sorters:focus-visible {
+                color: $pryColor;
+            }
+
             & .ant-table-pagination.ant-pagination {
                 margin-bottom: 0;
             }

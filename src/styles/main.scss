@@ -7,6 +7,8 @@ body {
 html {
     font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(60deg, $bgPryColor 0%, $bgSdyColor 50%, $bgPryColor 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #root {
@@ -52,12 +54,21 @@ a {
         display: none;
     }
 
-    & .ant-modal-footer .ant-btn-variant-solid:hover {
-        background: $sdyColor;
+    & .ant-modal-title {
+        display: flex;
+        align-items: center;
+
+        & .modal-icon {
+            margin-right: 8px;
+
+            & svg {
+                color: $sdyColor;
+                font-size: 19px;
+            }
+        }
     }
 
-    & .anticon-info-circle svg {
-        color: #ffd500;
-        font-size: 18px;
+    & .ant-modal-footer .ant-btn-variant-solid:hover {
+        background: $sdyColor;
     }
 }

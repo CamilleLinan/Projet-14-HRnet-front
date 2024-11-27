@@ -38,13 +38,14 @@ const EmployeeTable: FC = () => {
 
   return (
     <div className="table-container">
-      <h2>Employee List</h2>
+      <h2>Current Employees</h2>
       <Table
         dataSource={employees.map((employee, index) => ({
           ...employee,
           key: index,
         }))}
         columns={columns}
+        showSorterTooltip={false}
         pagination={{ pageSize: 5 }}
       />
     </div>

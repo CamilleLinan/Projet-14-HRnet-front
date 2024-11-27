@@ -32,6 +32,7 @@ const getColumnProps = ({ title, dataIndex, type }: ColumnProps) => {
         dataIndex,
         key: dataIndex,
         sorter,
+        ellipsis: { showTitle: false },
     };
 };
 
