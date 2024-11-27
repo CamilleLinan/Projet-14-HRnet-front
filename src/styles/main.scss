@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(255,213,0);
+    background: linear-gradient(0deg, $pryColor 0%, rgba(177,148,0,1) 50%, $pryColor 100%);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    flex: 1;
+}
+
+.section-employee-form {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ANT BTN */
+.ant-btn-color-primary {
+    color: black;
+    background-color: $pryColor;
+    box-shadow: 0 2px 0 rgba(255, 213, 0, 0.1);
+    transition: all 250ms ease-in-out;
+    &:hover {
+        background: $sdyColor;
+    }
+}
+
+/* ANT MODAL */
+.ant-modal {
+    width: 50%;
+
+    & .ant-modal-close {
+        display: none;
+    }
+
+    & .ant-modal-footer .ant-btn-variant-solid:hover {
+        background: $sdyColor;
+    }
+
+    & .anticon-info-circle svg {
+        color: #ffd500;
+        font-size: 18px;
+    }
+}
