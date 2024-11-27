@@ -24,11 +24,12 @@
             padding: 1em 1em 0em 1em;
             border-radius: 10px;
             margin-bottom: 1em;
+            border: 1px solid $bgPryColor;
         }
 
         & .ant-input-outlined:hover, 
-        .ant-picker-outlined:hover, 
-        .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+        & .ant-picker-outlined:hover, 
+        & .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
             border-color: $pryColor;
         }
 

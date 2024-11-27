@@ -33,9 +33,9 @@ const EmployeeForm = () => {
       zipCode: values.zipCode,
     };
 
-    console.log("Form values:", newEmployee);
     dispatch(addEmployee(newEmployee));
     setModalVisible(true);
+    form.resetFields();
   };
 
   return (
@@ -181,10 +181,10 @@ const EmployeeForm = () => {
         visible={modalVisible}
         onConfirm={handleModal}
         title={
-          <span>
-            <InfoCircleOutlined style={{ marginRight: '8px' }} />
+          <>
+            <InfoCircleOutlined className="modal-icon" />
             Confirmation
-          </span>
+          </>
         }
         content="Employee created !"
         footerButtons={[
