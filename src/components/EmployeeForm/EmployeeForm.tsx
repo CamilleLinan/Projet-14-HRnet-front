@@ -173,7 +173,7 @@ const EmployeeForm = () => {
 
         <Row justify={"center"}>
           <Button type="primary" htmlType="submit">
-            Save
+            SUBMIT
           </Button>
         </Row>
       </Form>

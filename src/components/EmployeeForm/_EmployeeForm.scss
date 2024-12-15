@@ -35,23 +35,40 @@
 
         & .ant-row > .ant-btn {
             background-color: $pryColor;
-            color: black;
             width: 20%;
             &:hover {
                 background-color: $sdyColor;
-                color: black;
             }
         }
 
-        .ant-select-focused:where(.css-dev-only-do-not-override-apn68).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
-        .ant-picker-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-picker-outlined:focus-within,
-        .ant-input-outlined:focus, :where(.css-dev-only-do-not-override-apn68).ant-input-outlined:focus-within {
+        & .ant-select-focused.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector,
+        & .ant-picker-outlined:focus, .ant-picker-outlined:focus-within,
+        & .ant-input-outlined:focus, .ant-input-outlined:focus-within {
             border-color: $pryColor;
             box-shadow: 0 0 0 2px rgba(186, 155, 0, 0.1);
         }
 
-        .ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label {
+        & .ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label {
             padding-bottom: 2px;
         }
     }
 }
+
+.ant-picker-dropdown {
+    & .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+        border: 1px solid $pryColor;
+    }
+
+    & .ant-picker-cell-in-view.ant-picker-cell-selected:not(.ant-picker-cell-disabled) .ant-picker-cell-inner, 
+    & .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled) .ant-picker-cell-inner, 
+    & .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
+        background: $pryColor
+    }
+
+    & .ant-picker-footer {
+        & a:hover {
+            color: $pryColor;
+        }
+    }
+}
+    

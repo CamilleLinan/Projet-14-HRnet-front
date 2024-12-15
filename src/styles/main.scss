@@ -14,7 +14,7 @@ html {
 #root {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -37,7 +37,7 @@ a {
 
 /* ANT BTN */
 .ant-btn-color-primary {
-    color: black;
+    color: white;
     background-color: $pryColor;
     box-shadow: 0 2px 0 rgba(255, 213, 0, 0.1);
     transition: all 250ms ease-in-out;
@@ -71,4 +71,29 @@ a {
     & .ant-modal-footer .ant-btn-variant-solid:hover {
         background: $sdyColor;
     }
+}
+
+/* ANT DROPDOWN */
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected {
+    color: $pryColor;
+    background-color: $bgDropdownSelected;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover, 
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,  
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,  
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active {
+    background-color: $bgDropdownSelectedHover;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    font-weight: 500;
+    background-color: $bgDropdownSelected;
 }

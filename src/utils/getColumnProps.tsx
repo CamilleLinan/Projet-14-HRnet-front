@@ -1,38 +1,48 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Employee } from "src/models/Employee";
 
 interface ColumnProps {
     title: string,
     dataIndex: keyof Employee,
-    type: 'text' | 'number' | 'date'
+    type: 'text' | 'number' | 'date',
+    width?: number,
+    filters?: { text: string; value: any }[];
+    onFilter?: (value: any, record: Employee) => boolean;
 }
 
-const getColumnProps = ({ title, dataIndex, type }: ColumnProps) => {
+const getColumnProps = ({ title, dataIndex, type, width, filters, onFilter }: ColumnProps) => {
     let sorter;
 
     switch (type) {
         case 'text':
             sorter = (a: Employee, b: Employee) =>
                 String(a[dataIndex]).localeCompare(String(b[dataIndex]));
-        break;
+            break;
+
         case 'number':
             sorter = (a: Employee, b: Employee) =>
                 Number(a[dataIndex]) - Number(b[dataIndex]);
-        break;
+            break;
+
         case 'date':
             sorter = (a: Employee, b: Employee) =>
                 new Date(String(a[dataIndex])).getTime() -
                 new Date(String(b[dataIndex])).getTime();
-        break;
+            break;
+
         default:
-        sorter = undefined;
+            sorter = undefined;
     }
 
     return {
         title,
         dataIndex,
         key: dataIndex,
+        width,
         sorter,
-        ellipsis: { showTitle: false },
+        filters,
+        onFilter,
+        filterSearch: true,
     };
 };
 
