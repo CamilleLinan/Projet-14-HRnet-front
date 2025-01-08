@@ -8,10 +8,29 @@
         border-radius: 10px;
         background-color: $bgSectionColor;
 
-        & h2 {
-            margin-top: -3px;
-            margin-bottom: 12px;
-            font-size: 20px;
+        & .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+
+            & h2 {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            & .ant-input {
+                width: 30%;
+            }
+
+            & > .ant-input-outlined:focus, .ant-input-outlined:focus-within {
+                border-color: $pryColor;
+                box-shadow: 0 0 0 2px rgba(186, 155, 0, 0.1);
+            }
+
+            & > .ant-input-outlined:hover {
+                border-color: $pryColor;
+            }
         }
 
         & .ant-table-wrapper {

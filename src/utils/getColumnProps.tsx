@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Employee } from "src/models/Employee";
 
 interface ColumnProps {
@@ -6,11 +5,9 @@ interface ColumnProps {
     dataIndex: keyof Employee,
     type: 'text' | 'number' | 'date',
     width?: number,
-    filters?: { text: string; value: any }[];
-    onFilter?: (value: any, record: Employee) => boolean;
 }
 
-const getColumnProps = ({ title, dataIndex, type, width, filters, onFilter }: ColumnProps) => {
+const getColumnProps = ({ title, dataIndex, type, width }: ColumnProps) => {
     let sorter;
 
     switch (type) {
@@ -40,9 +37,6 @@ const getColumnProps = ({ title, dataIndex, type, width, filters, onFilter }: Co
         key: dataIndex,
         width,
         sorter,
-        filters,
-        onFilter,
-        filterSearch: true,
     };
 };
 
