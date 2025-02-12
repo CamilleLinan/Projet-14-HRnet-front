@@ -5,8 +5,23 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 1em 0 1em;
-    background-color: $bgSectionColor;
+    background-color: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    & .logo-container {
+        display: flex;
+        align-items: center;
+        & img {
+            width: 45px;
+            margin: 5px 5px 5px 0;
+        }
+    }
+
+    & .links-container {
+        display: flex;
+        gap: 3.5em;
+    }
 
     & p {
         font-weight: bold;
@@ -14,23 +29,24 @@ header {
         margin: 0.5em 0 0.5em 0;
     }
 
-    a {
+    & .link {
         position: relative;
-    }
 
-    a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: -3px;
-        left: 50%;
-        background-color: $pryColor;
-        transition: width 0.4s ease, left 0.4s ease;
-    }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -3px;
+            left: 50%;
+            background-color: $pryColor;
+            transition: width 0.4s ease, left 0.4s ease;
+        }
 
-    a:hover::after {
-        width: 100%;
-        left: 0;
+        &.active::after,
+        &.inactive:hover::after {
+            width: 100%;
+            left: 0;
+        }
     }
 }

@@ -6,14 +6,15 @@ body {
 
 html {
     font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
-    background: rgb(255,213,0);
-    background: linear-gradient(0deg, $pryColor 0%, rgba(177,148,0,1) 50%, $pryColor 100%);
+    background: linear-gradient(60deg, $bgPryColor 0%, $bgSdyColor 50%, $bgPryColor 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #root {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -36,7 +37,7 @@ a {
 
 /* ANT BTN */
 .ant-btn-color-primary {
-    color: black;
+    color: white;
     background-color: $pryColor;
     box-shadow: 0 2px 0 rgba(255, 213, 0, 0.1);
     transition: all 250ms ease-in-out;
@@ -53,12 +54,46 @@ a {
         display: none;
     }
 
+    & .ant-modal-title {
+        display: flex;
+        align-items: center;
+
+        & .modal-icon {
+            margin-right: 8px;
+
+            & svg {
+                color: $sdyColor;
+                font-size: 19px;
+            }
+        }
+    }
+
     & .ant-modal-footer .ant-btn-variant-solid:hover {
         background: $sdyColor;
     }
+}
 
-    & .anticon-info-circle svg {
-        color: #ffd500;
-        font-size: 18px;
-    }
+/* ANT DROPDOWN */
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected,
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected {
+    color: $pryColor;
+    background-color: $bgDropdownSelected;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover, 
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected:hover, 
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected:hover,  
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-selected-active,  
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active,  
+.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-selected-active {
+    background-color: $bgDropdownSelectedHover;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    font-weight: 500;
+    background-color: $bgDropdownSelected;
 }
