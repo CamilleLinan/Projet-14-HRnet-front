@@ -1,0 +1,52 @@
+@use '@scss/variables' as *;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em 0 1em;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    & .logo-container {
+        display: flex;
+        align-items: center;
+        & img {
+            width: 45px;
+            margin: 5px 5px 5px 0;
+        }
+    }
+
+    & .links-container {
+        display: flex;
+        gap: 3.5em;
+    }
+
+    & p {
+        font-weight: bold;
+        font-size: 22px;
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    & .link {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -3px;
+            left: 50%;
+            background-color: $pryColor;
+            transition: width 0.4s ease, left 0.4s ease;
+        }
+
+        &.active::after,
+        &.inactive:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
