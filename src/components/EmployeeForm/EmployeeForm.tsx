@@ -4,7 +4,7 @@ import { states } from "../../utils/states";
 import { InfoCircleOutlined } from '@ant-design/icons';
 import "./_EmployeeForm.scss";
 import { Form, Input, DatePicker, Select, Button, Row, Col } from "antd";
-import ConfirmModal from "@camlin/react-confirm-modal";
+import { ConfirmModal } from "@camlin/react-confirm-modal";
 import { useDispatch } from "react-redux";
 import { addEmployee } from "@redux/slices/employeeSlice";
 import dayjs from "dayjs";
