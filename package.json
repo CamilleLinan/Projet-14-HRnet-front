@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
-    "@camlin/react-confirm-modal": "^2.2.8",
+    "@camlin/react-confirm-modal": "^2.3.0",
     "@reduxjs/toolkit": "^2.3.0",
     "antd": "^5.21.6",
     "dayjs": "^1.11.13",
