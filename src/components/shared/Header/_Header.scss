@@ -1,6 +1,6 @@
 @use '@scss/variables' as *;
 
-header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,6 +47,15 @@ header {
         &.inactive:hover::after {
             width: 100%;
             left: 0;
+        }
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .header {
+        & .links-container {
+            gap: 1.8em;
         }
     }
 }

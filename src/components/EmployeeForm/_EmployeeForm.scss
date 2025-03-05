@@ -82,4 +82,13 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   appearance: textfield;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .section-employee-form {
+        & .form-container {
+            width: 85%;
+        }
+    }
+}
     

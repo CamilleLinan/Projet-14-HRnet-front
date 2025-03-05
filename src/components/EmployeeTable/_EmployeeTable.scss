@@ -43,7 +43,18 @@
                 & .ant-table-thead>tr>th {
                     overflow-wrap: normal;
                     white-space: nowrap;
+                    padding: 14px 16px;
                 }
+            }
+
+            & td.ant-table-column-sort {
+                background: none;
+            }
+
+            & .ant-table-tbody > tr > td {
+                padding: 13px 16px;
+                overflow-wrap: normal;
+                white-space: nowrap;
             }
 
             & .ant-table-thead th.ant-table-column-has-sorters:focus-visible,
@@ -61,6 +72,11 @@
                 position: absolute;
                 left: 0;
                 font-weight: 500;
+            }
+
+            & .ant-pagination .ant-pagination-options {
+                position: absolute;
+                right: 0;
             }
 
             & .ant-pagination .ant-pagination-item-active {
@@ -123,5 +139,11 @@
         &:hover {
             background-color: $sdyColor;
         }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .ant-pagination .ant-pagination-options {
+        display: block;
     }
 }

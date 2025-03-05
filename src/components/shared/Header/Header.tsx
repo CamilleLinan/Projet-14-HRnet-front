@@ -6,7 +6,7 @@ import { RightCircleOutlined, HomeOutlined } from '@ant-design/icons';
 
 const Header: FC = () => {
   return (
-    <header>
+    <header className='header'>
       <div className='logo-container'>
         <img src={logo} alt="Wealth Health logo" />
         <p>HRnet</p>

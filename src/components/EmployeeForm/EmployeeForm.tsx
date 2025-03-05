@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Employee } from "../../models/Employee";
-import { states } from "../../utils/states";
-import { InfoCircleOutlined } from '@ant-design/icons';
 import "./_EmployeeForm.scss";
+import dayjs from "dayjs";
 import { Form, Input, DatePicker, Select, Button, Row, Col } from "antd";
-import { ConfirmModal } from "@camlin/react-confirm-modal";
+import { InfoCircleOutlined } from '@ant-design/icons';
 import { useDispatch } from "react-redux";
 import { addEmployee } from "@redux/slices/employeeSlice";
-import dayjs from "dayjs";
+import { Employee } from "../../models/Employee";
+import { states } from "../../utils/states";
+import { departments } from "../../utils/departments";
+import { ConfirmModal } from "@camlin/react-confirm-modal";
 
 const { Option } = Select;
 
@@ -111,11 +112,9 @@ const EmployeeForm = () => {
                 ]}
               >
                 <Select placeholder="Select a department">
-                  <Option value="Sales">Sales</Option>
-                  <Option value="Marketing">Marketing</Option>
-                  <Option value="Engineering">Engineering</Option>
-                  <Option value="Human Resources">Human Resources</Option>
-                  <Option value="Legal">Legal</Option>
+                  {departments.map((d, i) => (
+                    <Option key={i} value={d.name}>{d.name}</Option>
+                  ))}
                 </Select>
               </Form.Item>
             </Col>
