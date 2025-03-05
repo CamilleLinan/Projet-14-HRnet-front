@@ -1,3 +1,4 @@
+import { SortOrder } from "antd/es/table/interface";
 import { Employee } from "src/models/Employee";
 
 interface ColumnProps {
@@ -5,9 +6,18 @@ interface ColumnProps {
     dataIndex: keyof Employee,
     type: 'text' | 'number' | 'date',
     width?: number,
+    defaultSortOrder?: SortOrder,
+    render?: (date: Date) => string,
 }
 
-const getColumnProps = ({ title, dataIndex, type, width }: ColumnProps) => {
+const getColumnProps = ({ 
+    title, 
+    dataIndex, 
+    type, 
+    width,
+    defaultSortOrder, 
+    render 
+}: ColumnProps) => {
     let sorter;
 
     switch (type) {
@@ -37,6 +47,8 @@ const getColumnProps = ({ title, dataIndex, type, width }: ColumnProps) => {
         key: dataIndex,
         width,
         sorter,
+        defaultSortOrder: sorter ? defaultSortOrder : undefined,
+        render
     };
 };
 
