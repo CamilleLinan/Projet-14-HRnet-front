@@ -12,12 +12,12 @@ import dayjs from "dayjs";
 const { Option } = Select;
 
 const EmployeeForm = () => {
-  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [form] = Form.useForm();
   const dispatch = useDispatch();
 
   const handleModal = () => {
-    setModalVisible(false);
+    setModalOpen(false);
   };
 
   const saveEmployee = (values: Employee) => {
@@ -34,7 +34,7 @@ const EmployeeForm = () => {
     };
 
     dispatch(addEmployee(newEmployee));
-    setModalVisible(true);
+    setModalOpen(true);
     form.resetFields();
   };
 
@@ -178,8 +178,7 @@ const EmployeeForm = () => {
         </Row>
       </Form>
       <ConfirmModal
-        visible={modalVisible}
-        onConfirm={handleModal}
+        open={modalOpen}
         title={
           <>
             <InfoCircleOutlined className="modal-icon" />
