@@ -9,7 +9,7 @@ const Header: FC = () => {
     <header className='header'>
       <div className='logo-container'>
         <img src={logo} alt="Wealth Health logo" />
-        <p>HRnet</p>
+        <h1 className='title'>HRnet</h1>
       </div>
       <div className='links-container'>
         <div>
