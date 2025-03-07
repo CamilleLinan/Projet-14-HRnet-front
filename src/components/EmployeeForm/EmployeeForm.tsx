@@ -40,7 +40,7 @@ const EmployeeForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <article className="form-container">
       <h2>Create Employee</h2>
 
       <Form form={form} layout="vertical" onFinish={saveEmployee}>
@@ -192,7 +192,7 @@ const EmployeeForm = () => {
             onClick: handleModal
           }
         ]}/>
-    </div>
+    </article>
   );
 };
 
