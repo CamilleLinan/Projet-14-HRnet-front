@@ -82,15 +82,15 @@ const EmployeeTable: FC = () => {
   ];
 
   return (
-    <div className="table-container">
-      <div className="table-header">
+    <article className="table-container">
+      <header className="table-header">
         <h2>Current Employees</h2>
         <Input
           placeholder="Search"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-      </div>
+      </header>
       <Table
         dataSource={filteredEmployees.map((employee, index) => ({
           ...employee,
@@ -112,7 +112,7 @@ const EmployeeTable: FC = () => {
         }}
         scroll={{x: true}}
       />
-    </div>
+    </article>
   );
 };
 
