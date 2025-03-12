@@ -19,9 +19,16 @@ const EmployeeTable: FC = () => {
   const [pagination, setPagination] = useState({ pageSize: 10, current: 1 });
 
   const filteredEmployees = employees.filter((employee) => {
-    return Object.values(employee).some((value) => {
+    return Object.entries(employee).some(([key, value]) => {
       if (value) {
-        const normalizedValue = normalizeString(value.toString());
+        let normalizedValue;
+
+        if (["dateOfBirth", "startDate"].includes(key)) {
+          normalizedValue = dayjs(value).format("MM/DD/YYYY");
+        } else {
+          normalizedValue = normalizeString(value.toString());
+        }
+  
         const normalizedSearchText = normalizeString(searchText);
         return normalizedValue.includes(normalizedSearchText);
       }
