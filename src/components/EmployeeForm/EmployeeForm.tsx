@@ -191,7 +191,7 @@ const EmployeeForm = () => {
             type: 'primary',
             onClick: handleModal
           }
-        ]}/>
+        ]} />
     </article>
   );
 };
